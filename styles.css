@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:800px;
+    background-color: #fffee6;
+}
+
+.heart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+}
+
+.part {
+    background-color: red;
+    width: 50px;
+    height: 50px;
+}
+
+.circle {
+    border-radius: 50%;
+    translate: 0 -20px;
+    margin: -5px;
+}
+
+.square {
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+.heart {
+    transition: all 1s;
+}
+
+.heart:hover {
+    animation: heart-beat 3s;
+}
+
+@keyframes heart-beat {
+    0%, 20%, 40%, 60%, 80%, 100%{
+        transform: scale(1);
+    }
+
+    10%, 30%, 50%, 70%, 90% {
+        transform: scale(1.3);
+    }
+}
